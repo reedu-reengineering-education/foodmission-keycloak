@@ -8,6 +8,7 @@ import { UpdateProfile } from "../pages/UpdateProfile";
 import { Error } from "../pages/Error";
 import { DeleteAccountConfirm } from "../pages/DeleteAccountConfirm";
 import { Info } from "../pages/Info";
+import { OAuthGrant } from "../pages/OAuthGrant";
 import { useI18n } from "../i18n";
 
 interface Props {
@@ -45,6 +46,9 @@ export default function KcPage({ kcContext }: Props) {
 
     case "info.ftl":
       return <Info kcContext={kcContext} i18n={i18n} />;
+
+    case "login-oauth-grant.ftl":
+      return <OAuthGrant kcContext={kcContext} i18n={i18n} />;
 
     default:
       return (

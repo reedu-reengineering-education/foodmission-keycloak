@@ -1,6 +1,15 @@
 import { createGetKcContextMock } from "keycloakify/login/KcContext";
 import type { KcContext as KcContextBase } from "keycloakify/login/KcContext";
 
+// Define OAuth-specific context
+type OAuthContext = {
+  clientScopesRequested?: Array<{
+    name: string;
+    consentScreenText?: string;
+    dynamicScopeParameter?: string;
+  }>;
+};
+
 // Extend the base KcContext with custom properties
 export type KcContext = KcContextBase & {
   properties?: {
@@ -10,6 +19,10 @@ export type KcContext = KcContextBase & {
     privacyPolicyUrl?: string;
     termsOfServiceUrl?: string;
     logoUrl?: string;
+  };
+  oauth?: OAuthContext;
+  url: KcContextBase["url"] & {
+    oauthAction?: string;
   };
 };
 
