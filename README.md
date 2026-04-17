@@ -24,7 +24,7 @@ npm install
 npm run dev
 
 # Start Keycloak testing environment (optional)
-npm run start-keycloak-testing
+npm run dev:keycloak
 ```
 
 ### Available Scripts
