@@ -88,6 +88,11 @@ export function createLoginMockKcContext(
       displayInfo: false,
       providers: [],
     },
+    challenge: "",
+    userVerification: "not specified",
+    rpId: "",
+    createTimeout: "0",
+    isUserIdentified: "false",
     ...overrides,
   };
 }
