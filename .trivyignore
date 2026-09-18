@@ -1,0 +1,13 @@
+# DS-0026: No HEALTHCHECK. The Keycloak image has no curl; health is checked by
+# orchestrator probes on the management port (:9000/health/ready) instead.
+DS-0026
+
+# CVE-2026-53666, CVE-2026-53669: react-router 6.x via @keycloakify/keycloak-account-ui,
+# fixed only in 7.18. keycloakify requires the package for the Single-Page account
+# theme, but it is not imported, so it never ships in the theme JAR.
+CVE-2026-53666
+CVE-2026-53669
+
+# CVE-2025-59250: mssql-jdbc ships in the base image; only relevant when KC_DB=mssql.
+# Installed 13.2.1 is itself listed as a fixed version (jre11 variant naming).
+CVE-2025-59250

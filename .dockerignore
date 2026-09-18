@@ -1,0 +1,3 @@
+# The Dockerfile downloads the theme JAR from GitHub releases and copies
+# nothing from the build context. Allow-list files here if that changes.
+*
