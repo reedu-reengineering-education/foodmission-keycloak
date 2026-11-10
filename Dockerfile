@@ -7,6 +7,6 @@ RUN curl -L -f -o /kc-foodmission-theme.jar \
 
 # Stage 2: Final Keycloak image
 # Base image runs as user "keycloak" (uid/gid 2000 since 26.6, was 1000:0 before)
-FROM quay.io/phasetwo/phasetwo-keycloak:26.6.6
+FROM quay.io/phasetwo/phasetwo-keycloak:26.8.2
 COPY --from=loader --chown=keycloak:keycloak /kc-foodmission-theme.jar /opt/keycloak/providers/
 USER keycloak
