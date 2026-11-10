@@ -1,3 +1,15 @@
-# The Dockerfile downloads the theme JAR from GitHub releases and copies
-# nothing from the build context. Allow-list files here if that changes.
+# Allow-list: only what the builder stage needs to build the theme JAR.
 *
+!package.json
+!package-lock.json
+!index.html
+!vite.config.ts
+!jsx-email.config.js
+!tsconfig.json
+!tsconfig.node.json
+!components.json
+!public/
+!src/
+src/**/*.stories.tsx
+src/**/__tests__/
+src/test/
